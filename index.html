@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>91吃瓜大赛-吃瓜大赛热门黑料_爆料聚合看点</title>
+<meta name="description" content="91吃瓜大赛聚合当下热门吃瓜话题与黑料爆料看点，按榜单、现场、评论区与热搜线索整理，方便快速了解91吃瓜大赛里的热门事件与围观动态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23150f1c'/%3E%3Ccircle cx='24' cy='28' r='10' fill='none' stroke='%23ff4d6d' stroke-width='4'/%3E%3Ccircle cx='42' cy='38' r='10' fill='none' stroke='%23ffb703' stroke-width='4'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#120d18;
+  --bg2:#1b1324;
+  --card:#221830;
+  --line:#3a2b4c;
+  --txt:#f2ecf7;
+  --muted:#b9a9c9;
+  --pink:#ff4d6d;
+  --amber:#ffb703;
+  --mint:#4fd1a5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:
+    radial-gradient(900px 500px at 88% -8%,rgba(255,77,109,.22),transparent 60%),
+    radial-gradient(700px 420px at 6% 4%,rgba(255,183,3,.14),transparent 62%),
+    var(--bg);
+  color:var(--txt);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+img,svg{display:block;max-width:100%}
+
+/* header */
+header.site{
+  position:sticky;top:0;z-index:40;
+  backdrop-filter:blur(14px);
+  background:rgba(18,13,24,.82);
+  border-bottom:1px solid var(--line);
+}
+.bar{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;font-size:19px}
+.brand .mark{width:36px;height:36px;flex:0 0 auto}
+nav.main{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+nav.main a{
+  font-size:14px;color:var(--muted);padding:7px 12px;border-radius:999px;
+  border:1px solid transparent;transition:.2s;
+}
+nav.main a:hover,nav.main a:focus{color:#fff;border-color:var(--line);background:rgba(255,255,255,.05)}
+.searchbox{display:flex;gap:6px;align-items:center}
+.searchbox input{
+  width:170px;padding:8px 12px;border-radius:999px;border:1px solid var(--line);
+  background:#1a1224;color:var(--txt);font-size:14px;outline:none;
+}
+.searchbox input:focus{border-color:var(--pink)}
+.searchbox button{
+  padding:8px 14px;border-radius:999px;border:0;cursor:pointer;
+  background:linear-gradient(135deg,var(--pink),#c31432);color:#fff;font-size:14px;font-weight:600;
+}
+
+/* hero */
+.hero{padding:56px 0 44px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--amber);
+  border:1px solid rgba(255,183,3,.35);background:rgba(255,183,3,.08);
+  padding:5px 12px;border-radius:999px;margin-bottom:18px;
+}
+.kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber)}
+h1{
+  font-size:clamp(30px,5vw,52px);
+  line-height:1.18;letter-spacing:.5px;font-weight:900;
+  background:linear-gradient(100deg,#fff 20%,#ffb3c1 60%,var(--amber));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p.lead{margin-top:18px;color:var(--muted);font-size:16px;max-width:36em}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;
+  font-size:15px;font-weight:700;transition:.2s;border:1px solid transparent;
+}
+.btn-primary{background:linear-gradient(135deg,var(--pink),#b3123b);color:#fff;box-shadow:0 10px 26px -12px var(--pink)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line);color:var(--txt);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn[data-download-placeholder]{pointer-events:none;opacity:.92}
+.hero-art{position:relative}
+.hero-art svg{width:100%;height:auto;filter:drop-shadow(0 24px 40px rgba(0,0,0,.55))}
+
+/* stats strip */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px}
+.stat{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.stat b{display:block;font-size:22px;color:#fff}
+.stat span{font-size:12.5px;color:var(--muted)}
+
+/* sections */
+section{padding:52px 0;border-top:1px solid rgba(58,43,76,.6)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:26px}
+.sec-head h2{font-size:clamp(21px,3vw,28px);font-weight:800;letter-spacing:.4px}
+.sec-head p{color:var(--muted);font-size:14px;max-width:46em;margin-top:6px}
+.tag{font-size:12px;color:var(--pink);border:1px solid rgba(255,77,109,.4);padding:3px 10px;border-radius:999px}
+
+/* hot list */
+.rank{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.rank-item{
+  display:flex;gap:14px;padding:16px 18px;border-radius:16px;
+  background:linear-gradient(160deg,var(--card),#1a1224);
+  border:1px solid var(--line);transition:.22s;
+}
+.rank-item:hover{border-color:rgba(255,77,109,.55);transform:translateY(-3px)}
+.rank-no{
+  flex:0 0 34px;height:34px;border-radius:10px;display:grid;place-items:center;
+  font-weight:900;font-size:15px;background:rgba(255,77,109,.14);color:var(--pink);
+}
+.rank-item:nth-child(2) .rank-no{background:rgba(255,183,3,.14);color:var(--amber)}
+.rank-item:nth-child(3) .rank-no{background:rgba(79,209,165,.14);color:var(--mint)}
+.rank-item h3{font-size:15.5px;font-weight:700;line-height:1.5}
+.rank-item p{font-size:13px;color:var(--muted);margin-top:4px}
+.rank-meta{font-size:12px;color:#8f7fa3;margin-top:8px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{
+  background:linear-gradient(170deg,#241a33,#191123);
+  border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;
+}
+.card .ico{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:rgba(255,77,109,.12)}
+.card h3{font-size:16.5px;font-weight:800}
+.card p{font-size:13.8px;color:var(--muted);flex:1}
+.card .more{font-size:13px;color:var(--amber);font-weight:600}
+
+/* article body */
+.read{display:grid;grid-template-columns:1fr 300px;gap:34px;align-items:start}
+.prose h2{font-size:22px;margin:0 0 12px;font-weight:800}
+.prose h3{font-size:16.5px;margin:26px 0 8px;color:#ffd9e0;font-weight:700}
+.prose p{color:#d6c9e3;font-size:15px;margin-bottom:12px}
+.prose p strong{color:#fff}
+.quote{
+  border-left:3px solid var(--pink);background:rgba(255,77,109,.07);
+  padding:14px 18px;border-radius:0 12px 12px 0;font-size:14px;color:#e8dcef;margin:18px 0;
+}
+.aside{position:sticky;top:84px;display:grid;gap:14px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.panel h4{font-size:14px;color:var(--amber);letter-spacing:.5px;margin-bottom:10px}
+.panel ul{list-style:none;display:grid;gap:9px}
+.panel li{font-size:13.4px;color:var(--muted);display:flex;gap:8px;align-items:flex-start}
+.panel li i{flex:0 0 6px;height:6px;border-radius:50%;background:var(--pink);margin-top:8px}
+
+/* filter */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters button{
+  padding:7px 15px;border-radius:999px;font-size:13.5px;cursor:pointer;
+  border:1px solid var(--line);background:transparent;color:var(--muted);transition:.18s;
+}
+.filters button.active,.filters button:hover{
+  background:var(--pink);border-color:var(--pink);color:#fff;
+}
+.share-list{display:grid;gap:12px}
+.share{
+  display:flex;justify-content:space-between;gap:16px;align-items:center;
+  padding:15px 18px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.025);
+}
+.share .t{font-size:14.5px;font-weight:600}
+.share .d{font-size:12.5px;color:var(--muted);margin-top:3px}
+.share .pill{font-size:12px;padding:3px 10px;border-radius:999px;background:rgba(79,209,165,.14);color:var(--mint);white-space:nowrap}
+.empty{display:none;color:var(--muted);font-size:14px;padding:18px}
+
+/* faq */
+.faq{display:grid;gap:10px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+details summary{cursor:pointer;font-size:15px;font-weight:700;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"＋";color:var(--pink);margin-right:8px;font-weight:900}
+details[open] summary::before{content:"－"}
+details p{font-size:14px;color:var(--muted);margin-top:10px}
+
+/* footer */
+footer.site{border-top:1px solid var(--line);padding:34px 0 28px;background:rgba(0,0,0,.25)}
+.f-grid{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;align-items:flex-start}
+.f-brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.f-brand svg{width:30px;height:30px}
+.f-note{color:var(--muted);font-size:13px;max-width:40em;margin-top:10px}
+.f-links{display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
+.f-links a:hover{color:#fff}
+.copy{margin-top:24px;padding-top:16px;border-top:1px solid rgba(58,43,76,.6);font-size:12.5px;color:#8f7fa3;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media(max-width:920px){
+  .hero-grid,.read{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .aside{position:static}
+  .hero-art{order:-1;max-width:420px;margin:0 auto}
+}
+@media(max-width:640px){
+  .bar{gap:10px}
+  nav.main{order:3;width:100%;margin-left:0;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}
+  nav.main a{white-space:nowrap}
+  .searchbox{order:4;width:100%}
+  .searchbox input{flex:1;width:auto}
+  .cards,.rank{grid-template-columns:1fr}
+  .hero{padding:34px 0 28px}
+  section{padding:38px 0}
+  .share{flex-direction:column;align-items:flex-start;gap:6px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="91吃瓜大赛首页">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1d1428"/>
+        <circle cx="24" cy="27" r="10" fill="none" stroke="#ff4d6d" stroke-width="4"/>
+        <circle cx="41" cy="38" r="10" fill="none" stroke="#ffb703" stroke-width="4"/>
+        <circle cx="24" cy="27" r="3" fill="#ff4d6d"/>
+      </svg>
+      <span>91吃瓜大赛</span>
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#hot">热榜</a>
+      <a href="#boards">围观分区</a>
+      <a href="#digest">爆料速览</a>
+      <a href="#live">现场线索</a>
+      <a href="#faq">常见疑问</a>
+    </nav>
+    <form class="searchbox" role="search" onsubmit="return false;">
+      <input id="q" type="search" placeholder="搜话题 / 关键词" aria-label="搜索吃瓜话题">
+      <button type="button" id="qbtn">搜一下</button>
+    </form>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="kicker"><span class="dot"></span>今日围观热度持续走高</span>
+          <h1>91吃瓜大赛</h1>
+          <p class="lead">这里把散落在各处的热门瓜集中到一处：91吃瓜大赛的热榜、黑料线索、评论区神评与现场截图，按时间和热度重新梳理，先看结论，再顺着线索往下翻。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#hot">查看热榜 ›</a>
+            <a class="btn btn-ghost" href="#digest">爆料速览</a>
+            <a class="btn btn-ghost" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><b>12</b><span>在榜话题</span></div>
+            <div class="stat"><b>5</b><span>围观分区</span></div>
+            <div class="stat"><b>48h</b><span>热榜滚动周期</span></div>
+            <div class="stat"><b>3</b><span>线索来源层级</span></div>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 420 340" role="img">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ff4d6d"/><stop offset="1" stop-color="#7a1230"/>
+              </linearGradient>
+              <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffb703"/><stop offset="1" stop-color="#b06a00"/>
+              </linearGradient>
+            </defs>
+            <rect x="30" y="40" width="360" height="260" rx="24" fill="#1e1529" stroke="#3a2b4c"/>
+            <circle cx="140" cy="140" r="46" fill="none" stroke="url(#g1)" stroke-width="10"/>
+            <circle cx="270" cy="196" r="46" fill="none" stroke="url(#g2)" stroke-width="10"/>
+            <circle cx="140" cy="140" r="13" fill="#ff4d6d"/>
+            <circle cx="270" cy="196" r="13" fill="#ffb703"/>
+            <rect x="60" y="248" width="150" height="12" rx="6" fill="#3a2b4c"/>
+            <rect x="60" y="270" width="96" height="10" rx="5" fill="#2c2039"/>
+            <rect x="250" y="60" width="108" height="10" rx="5" fill="#3a2b4c"/>
+            <rect x="250" y="80" width="70" height="10" rx="5" fill="#2c2039"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOT RANK -->
+  <section id="hot">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>91吃瓜大赛热榜</h2>
+          <p>按讨论量、转发速度和评论区增量排序，每 48 小时滚动一次。榜单只负责提示热度，具体事实仍以下方线索为准。</p>
+        </div>
+        <span class="tag">热度排序</span>
+      </div>
+      <div class="rank">
+        <article class="rank-item">
+          <div class="rank-no">01</div>
+          <div>
+            <h3>「沉默的录音」前后版本对不上</h3>
+            <p>两段流传音频的时长差 17 秒，网友正在逐帧比对。</p>
+            <div class="rank-meta"><span>讨论 3.2 万</span><span>新增 6 小时前</span></div>
+          </div>
+        </article>
+        <article class="rank-item">
+          <div class="rank-no">02</div>
+          <div>
+            <h3>深夜长文与删除的九张图</h3>
+            <p>发布者已清空动态，但截图仍在多个群组内流转。</p>
+            <div class="rank-meta"><span>讨论 2.7 万</span><span>新增 9 小时前</span></div>
+          </div>
+        </article>
+        <article class="rank-item">
+          <div class="rank-no">03</div>
+          <div>
+            <h3>同一时间地点的三段现场视频</h3>
+            <p>机位不同、光线不同，时间戳却高度接近。</p>
+            <div class="rank-meta"><span>讨论 1.9 万</span><span>新增 12 小时前</span></div>
+          </div>
+        </article>
+        <article class="rank-item">
+          <div class="rank-no">04</div>
+          <div>
+            <h3>评论区神评被二次搬运</h3>
+            <p>原楼已不可见，搬运帖反而成了新的讨论中心。</p>
+            <div class="rank-meta"><span>讨论 1.4 万</span><span>新增 15 小时前</span></div>
+          </div>
+        </article>
+        <article class="rank-item">
+          <div class="rank-no">05</div>
+          <div>
+            <h3>品牌方一小时内撤回的合作海报</h3>
+            <p>海报发布时间与声明时间只差 40 分钟。</p>
+            <div class="rank-meta"><span>讨论 1.1 万</span><span>新增 20 小时前</span></div>
+          </div>
+        </article>
+        <article class="rank-item">
+          <div class="rank-no">06</div>
+          <div>
+            <h3>「路人视角」账号集中改名</h3>
+            <p>同一批账号在 24 小时内先后更换昵称与头像。</p>
+            <div class="rank-meta"><span>讨论 8600</span><span>新增 26 小时前</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOARDS -->
+  <section id="boards">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>围观分区</h2>
+          <p>同一个瓜往往横跨多个分区。91吃瓜大赛把线索按性质拆开，方便先定位再深挖，不必在信息流里来回翻找。</p>
+        </div>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff4d6d" stroke-width="2"><path d="M4 19V7l8-4 8 4v12"/><path d="M4 19h16"/><path d="M9 19v-6h6v6"/></svg>
+          </div>
+          <h3>黑料线索区</h3>
+          <p>按时间线归档截图、录屏与聊天记录，标注每条的首次出现时间，避免新旧版本混在一起看。</p>
+          <span class="more">按时间线查看 ›</span>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffb703" stroke-width="2"><path d="M3 6h18v12H3z"/><path d="M7 10h6"/><path d="M7 14h10"/></svg>
+          </div>
+          <h3>爆料速览区</h3>
+          <p>把长文压缩成三句话：谁、发生了什么、目前能确认到哪一步。适合只想快速了解梗概的读者。</p>
+          <span class="more">读三句话版本 ›</span>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4fd1a5" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h3>现场线索区</h3>
+          <p>整理视频机位、拍摄角度与时间戳，标注哪些是可核对的公开画面，哪些只是转述。</p>
+          <span class="more">看机位对照 ›</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIGEST -->
+  <section id="digest">
+    <div class="wrap">
+      <div class="read">
+        <div class="prose">
+          <h2>爆料速览：先看懂再往下翻</h2>
+          <p>91吃瓜大赛里最容易被忽略的一点，是「谁先说的」。很多看起来完整的叙述，其实是多个人的转述拼接而成，越往后传细节越丰富，反而离原始画面越远。因此本站把每条内容拆成三层：<strong>原始素材、二次转述、评论衍生</strong>。三层分开看，判断会稳得多。</p>
+          <div class="quote">一条完整的吃瓜线索，通常包含画面、文字与时间戳三者。缺了任何一项，结论都应当先打问号。</div>
+          <h3>版本差异从哪里来</h3>
+          <p>以本周热榜第一的音频话题为例，两段流传版本的差别主要在开头 17 秒。前一版从环境音开始，后一版直接进入对话。这种剪辑差异常见于手机端的自动截取，未必代表有人刻意删改，但它确实会改变听感判断。</p>
+          <h3>评论区为什么值得单独看</h3>
+          <p>评论区的价值不在结论，而在补充。原帖往往只给一个片段，评论里会有人指出时间、地点或前后文。把这些补充收拢起来，才能拼出相对完整的时间线。91吃瓜大赛的评论衍生区正是为此保留。</p>
+          <h3>怎么判断一条爆料是否过时</h3>
+          <p>看三件事：原帖是否仍可见、当事人是否回应、传播是否已跨平台。三项都发生变化时，旧内容就应当标注为「已被后续覆盖」，而不是继续当作最新进展使用。</p>
+        </div>
+        <aside class="aside">
+          <div class="panel">
+            <h4>线索来源层级</h4>
+            <ul>
+              <li><i></i>原始素材：直接拍摄或直接发布</li>
+              <li><i></i>二次转述：截图搬运、文字复述</li>
+              <li><i></i>评论衍生：评论区补充与推断</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h4>阅读顺序建议</h4>
+            <ul>
+              <li><i></i>先看速览三句话</li>
+              <li><i></i>再对时间线找版本差</li>
+              <li><i></i>最后看评论区补充</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE -->
+  <section id="live">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>现场线索时间线</h2>
+          <p>以下条目按出现顺序排列，可点击标签筛选。每条只记录公开可见的素材与时间，不代替事实认定。</p>
+        </div>
+      </div>
+      <div class="filters" role="group" aria-label="线索筛选">
+        <button class="active" data-f="all">全部</button>
+        <button data-f="video">视频画面</button>
+        <button data-f="text">文字长文</button>
+        <button data-f="comment">评论补充</button>
+      </div>
+      <div class="share-list" id="list">
+        <div class="share" data-c="video">
+          <div><div class="t">机位 A：街角监控视角，画面 23 秒</div><div class="d">首次出现 6 小时前 · 分辨率偏低，人物轮廓可辨</div></div>
+          <span class="pill">视频画面</span>
+        </div>
+        <div class="share" data-c="text">
+          <div><div class="t">深夜长文：作者自述前后经过</div><div class="d">首次出现 9 小时前 · 发布账号已清空动态</div></div>
+          <span class="pill">文字长文</span>
+        </div>
+        <div class="share" data-c="video">
+          <div><div class="t">机位 B：同场景仰拍，画面 41 秒</div><div class="d">首次出现 11 小时前 · 时间戳与机位 A 相差约 3 分钟</div></div>
+          <span class="pill">视频画面</span>
+        </div>
+        <div class="share" data-c="comment">
+          <div><div class="t">评论补充：指出画面中的时间水印</div><div class="d">首次出现 13 小时前 · 被多个搬运帖引用</div></div>
+          <span class="pill">评论补充</span>
+        </div>
+        <div class="share" data-c="text">
+          <div><div class="t">合作方声明：撤回海报并说明时间差</div><div class="d">首次出现 20 小时前 · 声明全文仍可访问</div></div>
+          <span class="pill">文字长文</span>
+        </div>
+        <div class="share" data-c="comment">
+          <div><div class="t">评论补充：整理同名账号改名记录</div><div class="d">首次出现 26 小时前 · 附截图 6 张</div></div>
+          <span class="pill">评论补充</span>
+        </div>
+      </div>
+      <p class="empty" id="empty">没有符合该筛选的线索，换一个标签看看。</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>常见疑问</h2>
+          <p>关于91吃瓜大赛怎么用、榜单怎么看、下载入口在哪，集中回答在这里。</p>
+        </div>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>91吃瓜大赛的榜单是按什么排的？</summary>
+          <p>按讨论量、转发速度与评论区增量综合排序，每 48 小时滚动。榜单只反映热度，不代表内容已被证实，具体仍需回到时间线核对。</p>
+        </details>
+        <details>
+          <summary>视频与截图会保留多久？</summary>
+          <p>条目会保留其首次出现时间与来源层级标注。若原帖已不可见，条目会标记为「已被后续覆盖」，方便区分新旧版本。</p>
+        </details>
+        <details>
+          <summary>为什么有的爆料只有三句话？</summary>
+          <p>速览区只保留能确认的要素：谁、发生了什么、目前进展到哪一步。细节较多的部分放在时间线里，读者可自行深入。</p>
+        </details>
+        <details>
+          <summary>下载入口现在可以用吗？</summary>
+          <p>下载入口正在准备中，按钮暂为不可点击状态。正式地址发布后会替换该入口，页面其他内容不受影响。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#1d1428"/>
+            <circle cx="24" cy="27" r="10" fill="none" stroke="#ff4d6d" stroke-width="4"/>
+            <circle cx="41" cy="38" r="10" fill="none" stroke="#ffb703" stroke-width="4"/>
+          </svg>
+          <span>91吃瓜大赛</span>
+        </div>
+        <p class="f-note">91吃瓜大赛聚合热门吃瓜话题、黑料线索与评论补充，按热度与时间线整理。页面内容为公开素材的归纳呈现，不代替事实认定。</p>
+      </div>
+      <div class="f-links">
+        <a href="#hot">热榜</a>
+        <a href="#boards">围观分区</a>
+        <a href="#digest">爆料速览</a>
+        <a href="#live">现场线索</a>
+        <a href="#faq">常见疑问</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 91吃瓜大赛 · 围观内容按公开素材整理</span>
+      <span>内容以时间线标注为准，欢迎补充线索</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var list=document.getElementById('list');
+  var btns=document.querySelectorAll('.filters button');
+  var empty=document.getElementById('empty');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.classList.remove('active')});
+      b.classList.add('active');
+      var f=b.dataset.f,shown=0;
+      Array.prototype.forEach.call(list.children,function(item){
+        var ok=(f==='all'||item.dataset.c===f);
+        item.style.display=ok?'flex':'none';
+        if(ok)shown++;
+      });
+      empty.style.display=shown?'none':'block';
+    });
+  });
+
+  var q=document.getElementById('q'),qb=document.getElementById('qbtn');
+  function run(){
+    var kw=q.value.trim().toLowerCase();
+    var shown=0;
+    Array.prototype.forEach.call(list.children,function(item){
+      var ok=!kw||item.textContent.toLowerCase().indexOf(kw)>-1;
+      item.style.display=ok?'flex':'none';
+      if(ok)shown++;
+    });
+    empty.style.display=shown?'none':'block';
+    btns.forEach(function(x){x.classList.remove('active')});
+  }
+  qb.addEventListener('click',run);
+  q.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();run();}});
+})();
+</script>
+</body>
+              </html>
